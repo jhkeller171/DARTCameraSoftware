@@ -68,7 +68,7 @@ while True: #Loop to make the code run infinitely after choosing an option
                 width = "640"
                 height = "480"
         if answerZero == "3":
-            print("What would you like the framerate to be?")
+            print("What would you like the framerate to be? (30 FPS is the framerate for the largest video size)")
             print("0: Back")
             print("1: 30 FPS (Default)")
             print("2: 60 FPS")
@@ -81,13 +81,13 @@ while True: #Loop to make the code run infinitely after choosing an option
             if fpsAns == "3":
                 framerate = "90"
         if answerZero == "4":
-            print("What would you like the video format to be?")
+            print("What would you like the video format to be? (.mp4 Videos only work with the default framerate of 30 FPS)")
             print("0: Back")
             print("1: .h264 (Default)")
             print("2: .mp4")
             extAns = input()
             if extAns == "1":
-                ext = ".h264 (Default)"
+                ext = ".h264"
             if extAns == "2":
                 ext = ".mp4 --codec libav"
     if answer == "1":
