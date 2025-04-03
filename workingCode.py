@@ -19,6 +19,7 @@ while True: #Loop to make the code run infinitely after choosing an option
     print("1: Live View Camera (Ctrl + C to end preview)")
     print("2: Take a video")
     print("3: Infinite Video")
+    print("4: Export Videos")
     answer = input()
     if answer == "-1":
         quit()
@@ -56,9 +57,9 @@ while True: #Loop to make the code run infinitely after choosing an option
         duration = input()
         print("What should the video name be?")
         vidName = input()
-        if vlfip == True and hflip == True:
+        if vflip == True and hflip == True:
             os.system("sudo rpicam-vid --vflip --hflip -o "+vidName+".h264 --width 1280 --height 720 --framerate 30 -t "+duration+"s")
-        elif vlfip == True:
+        elif vflip == True:
             os.system("sudo rpicam-vid --vflip -o "+vidName+".h264 --width 1280 --height 720 --framerate 30 -t "+duration+"s")
         elif hflip == True:
             os.system("sudo rpicam-vid --hflip -o "+vidName+".h264 --width 1280 --height 720 --framerate 30 -t "+duration+"s")
@@ -77,4 +78,5 @@ while True: #Loop to make the code run infinitely after choosing an option
         else:
             os.system("sudo rpicam-vid  -o "+vidName+".h264 --width 1280 --height 720 --framerate 30 -t 0")
         os.system("sudo mv "+vidName+".h264 /home/cam1/Desktop/'Test Videos'/")
-        
+    if answer == "4":
+       os.system("sudo cp -r /home/cam1/Desktop/'Test Videos'/* /media/*/*/")
