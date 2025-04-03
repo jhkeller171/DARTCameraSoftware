@@ -103,9 +103,9 @@ while True: #Loop to make the code run infinitely after choosing an option
         print("How long would you like the video to be in seconds?")
         duration = input()
         print("What should the video name be?")
-        vidName = input()
+        vidname = input()
         if vflip == True and hflip == True:
-            os.system("sudo rpicam-vid --vflip --hflip -o "+vidName+ext+" --width "+width+" --height "+height+" --framerate "+framerate+" -t "+duration+"s")
+            os.system("sudo rpicam-vid --vflip --hflip -o "+vidname+ext+" --width "+width+" --height "+height+" --framerate "+framerate+" -t "+duration+"s")
         elif vflip == True:
             os.system("sudo rpicam-vid --vflip -o "+vidname+ext+" --width "+width+" --height "+height+" --framerate "+framerate+" -t "+duration+"s")
         elif hflip == True:
@@ -115,7 +115,7 @@ while True: #Loop to make the code run infinitely after choosing an option
         os.system("sudo mv "+vidname+".* /home/*/Desktop/'Test Videos'/")
     if answer == "3":
         print("What should the video name be?")
-        vidName = input()
+        vidname = input()
         if vflip == True and hflip == True:
             os.system("sudo rpicam-vid --vflip --hflip -o "+vidname+ext+" --width "+width+" --height "+height+" --framerate "+framerate+" -t 0")
         elif vflip == True:
