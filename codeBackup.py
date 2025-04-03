@@ -112,7 +112,7 @@ while True: #Loop to make the code run infinitely after choosing an option
             os.system("sudo rpicam-vid --hflip -o "+vidname+ext+" --width "+width+" --height "+height+" --framerate "+framerate+" -t "+duration+"s")
         else:
             os.system("sudo rpicam-vid -o "+vidname+ext+" --width "+width+" --height "+height+" --framerate "+framerate+" -t "+duration+"s")
-        os.system("sudo mv "+vidname+".* /home/*/Desktop/'Test Videos'/")
+        os.system("sudo mv "+vidname+ext+" /home/*/Desktop/'Test Videos'/")
     if answer == "3":
         print("What should the video name be?")
         vidName = input()
@@ -124,6 +124,6 @@ while True: #Loop to make the code run infinitely after choosing an option
             os.system("sudo rpicam-vid --hflip -o "+vidname+ext+" --width "+width+" --height "+height+" --framerate "+framerate+" -t 0")
         else:
             os.system("sudo rpicam-vid  -o "+vidname+ext+" --width "+width+" --height "+height+" --framerate "+framerate+" -t 0")
-        os.system("sudo mv "+vidname+".* /home/*/Desktop/'Test Videos'/")
+        os.system("sudo mv "+vidname+ext+" /home/*/Desktop/'Test Videos'/")
     if answer == "4":
        os.system("sudo cp -r /home/*/Desktop/'Test Videos'/* /media/*/*/")
