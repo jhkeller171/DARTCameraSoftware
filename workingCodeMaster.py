@@ -23,7 +23,7 @@ while True: #Loop to make the code run infinitely after choosing an option
     print("0: Properties")
     print("1: Live View Camera (Ctrl + C to end preview)")
     print("2: Take a video")
-    print("3: Infinite Video (Ctrl + C t end the video)")
+    print("3: Infinite Video (Ctrl + C to end the video)")
     print("4: Export Videos")
     answer = input()
     if answer == "-1":
