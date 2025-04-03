@@ -59,14 +59,14 @@ while True: #Loop to make the code run infinitely after choosing an option
             print("3: 640 x 480")
             resAns = input()
             if resAns == "1":
-                width = 1920
-                height = 1080
+                width = "1920"
+                height = "1080"
             if resAns == "2":
-                width = 1280
-                height = 720
+                width = "1280"
+                height = "720"
             if resAns == "3":
-                width = 640
-                height = 480
+                width = "640"
+                height = "480"
         if answerZero == "3":
             print("What would you like the framerate to be?")
             print("0: Back")
@@ -75,17 +75,16 @@ while True: #Loop to make the code run infinitely after choosing an option
             print("3: 90 FPS")
             fpsAns = input()
             if fpsAns == "1":
-                framerate = 30
+                framerate = "30"
             if fpsAns == "2":
-                framerate = 60
+                framerate = "60"
             if fpsAns == "3":
-                framerate = 90
+                framerate = "90"
         if answerZero == "4":
             print("What would you like the video format to be?")
             print("0: Back")
             print("1: .h264 (Default)")
             print("2: .mp4")
-            print("3: .avi")
             extAns = input()
             if extAns == "1":
                 ext = ".h264 (Default)"
