@@ -11,9 +11,9 @@ print("DART Lab Camera Software")
 print()
 vflip = False
 hflip = False
-width = 1280
-height = 720
-framerate = 30
+width = "1280"
+height = "720"
+framerate = "30"
 ext = ".h264"
 vidname = "noNameSet"
 
