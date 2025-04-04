@@ -28,6 +28,7 @@ while True: #Loop to make the code run infinitely after choosing an option
     print("2: Take a video")
     print("3: Infinite Video (Ctrl + C to end the video)")
     print("4: Export Videos")
+    print("5: Eject the Drive")
     answer = input()
     if answer == "-1":
         quit()
@@ -123,10 +124,17 @@ while True: #Loop to make the code run infinitely after choosing an option
             os.system("sudo rpicam-vid --vflip --hflip -o "+vidname+ext+" --width "+width+" --height "+height+" --framerate "+framerate+" -t 0")
         elif vflip == True:
             os.system("sudo rpicam-vid --vflip -o "+vidname+ext+" --width "+width+" --height "+height+" --framerate "+framerate+" -t 0")
+            print("Video Saved")
         elif hflip == True:
             os.system("sudo rpicam-vid --hflip -o "+vidname+ext+" --width "+width+" --height "+height+" --framerate "+framerate+" -t 0")
+            print("Video Saved")
         else:
             os.system("sudo rpicam-vid  -o "+vidname+ext+" --width "+width+" --height "+height+" --framerate "+framerate+" -t 0")
+            print("Video Saved")
         os.system("sudo mv "+vidname+".* /home/*/Desktop/'Test Videos'/")
+        print("Video Moved")
     if answer == "4":
        os.system("sudo cp -r /home/*/Desktop/'Test Videos'/* /media/*/*/")
+    if answer == "5":
+        os.system("sudo eject")
+        print("Drive Ejected")
